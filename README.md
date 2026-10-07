@@ -27,16 +27,3 @@ QuantOS is built on a decoupled microservice architecture, ensuring clear separa
 - **Data Engineering:** Pandas & NumPy for heavy computational logic.
 - **Deployment:** Containerized and hosted on Render with strict CORS and environment variable management.
 
-## 💻 Local Development Setup
-
-The system is decoupled, requiring both the Python backend and Next.js frontend to be running locally.
-
-### 1. Backend Setup (Python API)
-Navigate into the backend directory, activate your virtual environment, and install the dependencies:
-
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload
