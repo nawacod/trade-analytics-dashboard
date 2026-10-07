@@ -1,41 +1,37 @@
 # QuantOS 📈
 
-**Natural Language Algorithmic Backtesting Engine**
+**Full-Stack Data Analytics & Algorithmic Engine**
 
-QuantOS is a full-stack, enterprise-grade financial technology application. It allows quantitative traders to write trading strategies in plain English. The platform uses Natural Language Processing (NLP) to extract mathematical parameters and executes deterministic backtests against years of live Wall Street data in milliseconds.
+QuantOS is a full-stack web application designed to showcase scalable data pipeline architecture and system integration. It processes unstructured natural language input, converts it into structured mathematical parameters, and executes complex data analysis against large historical datasets in milliseconds. 
 
-## 🚀 Key Features
+This project demonstrates core software engineering principles including RESTful API design, automated data ingestion, and responsive frontend state management.
 
-- **NLP Parameter Extraction:** Parses human-readable strategy prompts (e.g., _"Buy QQQ with a 1.5% take profit"_) into strict JSON execution variables.
-- **Live Market Integration:** Directly queries the Yahoo Finance API (`yfinance`) to pull accurate, historical OHLCV data for ETFs, Forex, Commodities, and Crypto.
-- **Deterministic Pandas Engine:** A high-speed, custom-built Python backtesting engine utilizing `pandas` and `numpy` for sub-millisecond mathematical execution.
-- **Enterprise UI/UX:** A fully responsive Next.js frontend featuring state-based routing, dark/light mode context, and a command-palette asset search tool.
+## 🚀 Key Engineering Features
+
+- **Unstructured Data Parsing:** Utilizes Natural Language Processing to convert human-readable text (e.g., _"Buy QQQ with a 1.5% take profit"_) into strict, sanitized JSON payloads for backend execution.
+- **Automated Data Ingestion:** Integrates with external APIs (`yfinance`) to securely request, format, and process large volumes of historical time-series data.
+- **High-Performance Processing Engine:** A custom-built backend utilizing Python, `pandas`, and `numpy` to handle high-speed mathematical transformations and matrix calculations with sub-millisecond latency.
+- **Modern Component Architecture:** A fully responsive Next.js frontend featuring asynchronous API fetching, dynamic state-based routing, and a clean UI built with Tailwind CSS.
 
 ## 🛠️ System Architecture
 
-QuantOS is built on a decoupled microservice architecture:
+QuantOS is built on a decoupled microservice architecture, ensuring clear separation of concerns between the user interface and data processing logic:
 
 **Frontend (Next.js / React)**
-
-- Framework: Next.js 14 (App Router)
-- Styling: Tailwind CSS
-- Icons: Lucide React
-- Deployment: Netlify
+- **Framework:** Next.js 14 (App Router) for optimized rendering and routing.
+- **State & UI:** React components styled with Tailwind CSS for a scalable, maintainable design system.
+- **Deployment:** Hosted on Netlify with continuous integration.
 
 **Backend (Python / FastAPI)**
-
-- Framework: FastAPI & Uvicorn
-- Data Processing: Pandas & NumPy
-- Market Data: Yahoo Finance API (`yfinance`)
-- Parsing: Regular Expressions / OpenAI API
-- Deployment: Render
+- **Framework:** FastAPI & Uvicorn for handling high-concurrency RESTful API endpoints.
+- **Data Engineering:** Pandas & NumPy for heavy computational logic.
+- **Deployment:** Containerized and hosted on Render with strict CORS and environment variable management.
 
 ## 💻 Local Development Setup
 
-To run this project locally, you will need to start both the Python backend and the Next.js frontend.
+The system is decoupled, requiring both the Python backend and Next.js frontend to be running locally.
 
-### 1. Backend Setup
-
+### 1. Backend Setup (Python API)
 Navigate into the backend directory, activate your virtual environment, and install the dependencies:
 
 ```bash
@@ -43,4 +39,4 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
 pip install -r requirements.txt
-```
+uvicorn main:app --reload
