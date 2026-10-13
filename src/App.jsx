@@ -253,7 +253,7 @@ export default function App() {
           </p>
           <div className="flex justify-center gap-6">
             <ContactButton icon={<Mail size={24} />} text="Email Me" href="mailto:nhshimelis@cincinnatistate.edu" />
-            <ContactButton icon={<Briefcase size={24} />} text="LinkedIn" href="www.linkedin.com/in/naol-shimelis-2a7626247" />
+            <ContactButton icon={<Briefcase size={24} />} text="LinkedIn" href="https://www.linkedin.com/in/naol-shimelis-2a7626247/" />
             <ContactButton icon={<Code size={24} />} text="GitHub" href="https://github.com/nawacod" />
           </div>
         </motion.section>
